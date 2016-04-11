@@ -35,6 +35,7 @@ class Bot
   end
 
   def sleep_to_next_exercise
+    puts "Next exercise in #{random_time_interval / 60} minutes."
     sleep(random_time_interval)
   end
 
@@ -44,10 +45,10 @@ class Bot
   end
 
   def announce_exercise(exercise, reps)
-    winner_announcement = "#{reps} #{exercise["units"]} #{exercise["name"]} RIGHT NOW!"
+    announcement = "#{reps} #{exercise["units"]} of #{exercise["name"]} RIGHT NOW!"
 
-    HTTParty.post(@post_url, query: { channel: "@" + @user }, body: winner_announcement)
-    puts winner_announcement
+    puts announcement
+    HTTParty.post(@post_url, query: { channel: "@" + @user }, body: announcement)
   end
 end
 
