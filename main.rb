@@ -41,7 +41,7 @@ class Bot
 
   def random_reps(exercise)
     reps = exercise["repetitions"]
-    @rng.between(reps["min"], reps["max"] + 1)
+    @rng.between(reps["min"], reps["max"])
   end
 
   def announce_exercise(exercise, reps)
