@@ -31,12 +31,13 @@ class Bot
   end
 
   def random_time_interval
-    @rng.between(@min_interval * 60, @max_interval * 60)
+    @rng.between(@min_interval, @max_interval)
   end
 
   def sleep_to_next_exercise
-    puts "Next exercise in #{random_time_interval / 60} minutes."
-    sleep(random_time_interval)
+    next_time_interval = random_time_interval
+    puts "Next exercise in #{next_time_interval} minutes."
+    sleep(next_time_interval * 60)
   end
 
   def random_reps(exercise)
