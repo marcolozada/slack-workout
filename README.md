@@ -6,9 +6,9 @@ Let Slackbot remind you to get up, walk around, stretch, do some exercises, etc.
 
 1. Clone the repo.
 
-```
-$ git clone git@github.com:dontmitch/slack-workout.git
-```
+  ```
+  $ git clone git@github.com:dontmitch/slack-workout.git
+  ```
 
 2. Go to your Slack [home page](http://my.slack.com/home) and navigate to **Integrations**.
 
